@@ -1,6 +1,7 @@
 package net.melix.customcraft;
 
 import cn.nukkit.Player;
+import cn.nukkit.Server;
 import cn.nukkit.block.BlockID;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
@@ -35,9 +36,9 @@ public class CustomCraftCommand extends Command {
             }
 
             //BARRIER
-            chest.setItem(5, Item.get(BlockID.INVISIBLE_BEDROCK));
-            chest.setItem(14, Item.get(BlockID.INVISIBLE_BEDROCK));
-            chest.setItem(23, Item.get(BlockID.INVISIBLE_BEDROCK));
+            chest.setItem(5, Item.get(-161));
+            chest.setItem(14, Item.get(-161));
+            chest.setItem(23, Item.get(-161));
 
 
             player.addWindow(chest);

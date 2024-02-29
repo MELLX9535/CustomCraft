@@ -23,7 +23,7 @@ public class CustomShapedRecipe {
     }
 
     public String getItemResultHash(){
-        return this.getItemResult().getNamedTag().toSNBT();
+        return this.getItemResult().toString();
     }
 
     public String[] getShape(){

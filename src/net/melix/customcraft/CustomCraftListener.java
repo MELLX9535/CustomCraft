@@ -20,9 +20,7 @@ public class CustomCraftListener implements Listener {
         Item itemClick = inventory.getItem(event.getAction().getSlot());
 
         if(itemClick.getId() == 0) return;
-        if(itemClick.getNamedTag() == null) return;
-
-        String hash = itemClick.getNamedTag().toSNBT();
+        String hash = itemClick.toString();
         CustomCraft craft = CustomCraftList.getCrafts().get(hash);
 
         if(craft == null) return;

@@ -32,7 +32,7 @@ public class CustomCraftList {
                     put('S', Item.get(Item.NETHER_STAR));
                 }}),
 
-                new CustomShapedRecipe(Item.get(ItemID.ELYTRA), new String[]{
+                new CustomShapedRecipe(Item.get(ItemID.TOTEM), new String[]{
                         "GIG",
                         "IEI",
                         "GIG"
@@ -40,7 +40,25 @@ public class CustomCraftList {
                     put('G', Item.get(Item.GOLD_BLOCK));
                     put('I', Item.get(Item.IRON_INGOT));
                     put('E', Item.get(Item.EMERALD));
-                }})
+                }}),
+                new CustomShapedRecipe(Item.get(ItemID.TRIDENT), new String[]{
+                        " SS",
+                        " TS",
+                        "T  "
+                }, new HashMap<>(){{
+                    put('S', Item.get(Item.DIAMOND_SWORD));
+                    put('T', Item.get(Item.STICK));
+                }}),
+
+                new CustomShapedRecipe(Item.get(ItemID.SPYGLASS), new String[]{
+                        "ISI",
+                        "G G",
+                        "GSG"
+                }, new HashMap<>(){{
+                    put('I', Item.get(Item.IRON_INGOT));
+                    put('G', Item.get(Item.GOLD_INGOT));
+                    put('S', Item.get(Item.GLASS_PANE));
+                }}),
         };
 
         CraftingManager craftingManager = Server.getInstance().getCraftingManager();

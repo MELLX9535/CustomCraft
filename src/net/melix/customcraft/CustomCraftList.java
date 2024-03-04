@@ -64,9 +64,15 @@ public class CustomCraftList {
         CraftingManager craftingManager = Server.getInstance().getCraftingManager();
         for (CustomShapedRecipe recipe : shapedRecipes) {
             CustomCraft craft = new CustomCraft(recipe);
-            crafts.put(recipe.getItemResultHash(), craft);
 
-            craftingManager.registerRecipe(recipe.toShapedRecipe());
+            craftingManager.registerRecipe(313, recipe.toShapedRecipe());
+            craftingManager.registerRecipe(332, recipe.toShapedRecipe());
+            craftingManager.registerRecipe(388, recipe.toShapedRecipe());
+            craftingManager.registerRecipe(419, recipe.toShapedRecipe());
+            craftingManager.registerRecipe(527, recipe.toShapedRecipe());
+            craftingManager.registerRecipe(649, recipe.toShapedRecipe());
+
+            crafts.put(recipe.getItemResultHash(), craft);
         }
         craftingManager.rebuildPacket();
     }

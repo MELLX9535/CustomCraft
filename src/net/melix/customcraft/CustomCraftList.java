@@ -5,6 +5,7 @@ import cn.nukkit.inventory.CraftingManager;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemID;
 import net.melix.anarchregion.item.RegionItemManager;
+import net.melix.bottleexp.BottleEXP;
 
 import java.util.*;
 
@@ -58,6 +59,17 @@ public class CustomCraftList {
                     put('I', Item.get(Item.IRON_INGOT));
                     put('G', Item.get(Item.GOLD_INGOT));
                     put('S', Item.get(Item.GLASS_PANE));
+                }}),
+
+                new CustomShapedRecipe(BottleEXP.getBottleEXP(), new String[]{
+                        "GDG",
+                        "GPG",
+                        "GFG"
+                }, new HashMap<>(){{
+                    put('G', Item.get(371));
+                    put('D', Item.get(Item.DIAMOND));
+                    put('P', Item.get(373));
+                    put('F', Item.get(377));
                 }}),
         };
 

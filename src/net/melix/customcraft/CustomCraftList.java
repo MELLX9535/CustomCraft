@@ -39,7 +39,7 @@ public class CustomCraftList {
                         "GIG"
                 }, new HashMap<>(){{
                     put('G', Item.get(Item.GOLD_BLOCK));
-                    put('I', Item.get(Item.IRON_INGOT));
+                    put('I', Item.get(Item.DIAMOND));
                     put('E', Item.get(Item.EMERALD));
                 }}),
                 new CustomShapedRecipe(Item.get(ItemID.TRIDENT), new String[]{

@@ -40,7 +40,7 @@ public class CustomCraftList {
                 }, new HashMap<>(){{
                     put('G', Item.get(Item.GOLD_BLOCK));
                     put('I', Item.get(Item.DIAMOND));
-                    put('E', Item.get(Item.EMERALD));
+                    put('E', Item.get(Item.EMERALD_BLOCK));
                 }}),
                 new CustomShapedRecipe(Item.get(ItemID.TRIDENT), new String[]{
                         " SS",

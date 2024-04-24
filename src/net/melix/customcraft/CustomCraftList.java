@@ -4,6 +4,7 @@ import cn.nukkit.Server;
 import cn.nukkit.inventory.CraftingManager;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemID;
+import cn.nukkit.item.ItemNetheriteUpgradeSmithingTemplate;
 import net.melix.anarchregion.item.RegionItemManager;
 import net.melix.bottleexp.BottleEXP;
 
@@ -70,6 +71,16 @@ public class CustomCraftList {
                     put('D', Item.get(Item.DIAMOND));
                     put('P', Item.get(373));
                     put('F', Item.get(377));
+                }}),
+
+                new CustomShapedRecipe(new ItemNetheriteUpgradeSmithingTemplate(), new String[]{
+                        "DND",
+                        "NBN",
+                        "DND"
+                }, new HashMap<>(){{
+                    put('N', Item.get(Item.NETHERITE_INGOT));
+                    put('D', Item.get(Item.DIAMOND));
+                    put('B', Item.get(Item.BOOK));
                 }}),
         };
 

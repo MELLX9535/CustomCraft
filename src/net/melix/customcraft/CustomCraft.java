@@ -13,7 +13,7 @@ public class CustomCraft {
 
     public void setInventoryCraft(Inventory inventory){
         //select item slot
-        inventory.setItem(14, this.getRecipe().getItemResult());
+        inventory.setItem(15, this.getRecipe().getItemResult());
 
         int levelPage = 1;
         for (String level : this.getRecipe().getShape()){
@@ -35,9 +35,9 @@ public class CustomCraft {
 
     private int getSlotPageLevel(int levelPage, int page){
         return switch (levelPage){
-            case 1 -> (5 + page);
-            case 2 -> (14 + page);
-            case 3 -> (23 + page);
+            case 1 -> (1 + page);
+            case 2 -> (10 + page);
+            case 3 -> (19 + page);
             default -> throw new IllegalStateException("Unexpected value: " + levelPage);
         };
     }

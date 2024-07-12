@@ -79,7 +79,7 @@ public class CustomCraftList {
                         "DND"
                 }, new HashMap<>(){{
                     put('N', Item.get(Item.NETHERITE_INGOT));
-                    put('D', Item.get(Item.DIAMOND));
+                    put('D', Item.get(Item.DIAMOND_BLOCK));
                     put('B', Item.get(Item.BOOK));
                 }}),
         };

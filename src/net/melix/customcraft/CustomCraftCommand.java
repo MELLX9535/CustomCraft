@@ -7,6 +7,7 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.item.Item;
 import net.soulmc.inventory.ChestFakeInventory;
+import net.soulmc.inventory.DoubleChestFakeInventory;
 
 import java.util.Map;
 
@@ -18,10 +19,10 @@ public class CustomCraftCommand extends Command {
     @Override
     public boolean execute(CommandSender commandSender, String s, String[] strings) {
         if (commandSender instanceof Player player) {
-            final ChestFakeInventory chest = new ChestFakeInventory(null, CustomCraftManager.CHEST_ID + " " + CustomCraftManager.TITLE);
+            final DoubleChestFakeInventory chest = new DoubleChestFakeInventory(null, CustomCraftManager.CHEST_ID);
 
             int slot = 1;
-            int upper = 6;
+            int upper = 8;
             for (Map.Entry<String, CustomCraft> craftData : CustomCraftList.getCrafts().entrySet()) {
                 if (slot % upper == 0) {
                     slot += 4;
@@ -29,17 +30,11 @@ public class CustomCraftCommand extends Command {
                 }
 
                 CustomShapedRecipe recipe = craftData.getValue().getRecipe();
-                int currentSlot = (slot - 1);
+                int currentSlot = (slot + 36);
                 chest.setItem(currentSlot, recipe.getItemResult());
 
                 slot++;
             }
-
-            //BARRIER
-            chest.setItem(5, Item.get(-161));
-            chest.setItem(14, Item.get(-161));
-            chest.setItem(23, Item.get(-161));
-
 
             player.addWindow(chest);
         }
